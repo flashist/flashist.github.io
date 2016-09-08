@@ -1,5 +1,5 @@
 import {EngineAdapter, PixiAdapter} from "fgraphics/dist/index";
-import {CC} from "fconsole/dist/index";
+import {FC} from "fconsole/dist/index";
 import {FConsoleSettings} from "../FConsoleSettings";
 
 export class PixiNativeExample {
@@ -117,8 +117,9 @@ export class PixiNativeExample {
 
         // Console settings
         EngineAdapter.instance = new PixiAdapter({renderer: renderer, nativeStage: stage});
-        CC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
-        CC.visible = true;
+        FC.startInit(EngineAdapter.instance.createDisplayObjectContainerWrapper(stage));
+        // Optional
+        FC.visible = true;
     }
 
 }
